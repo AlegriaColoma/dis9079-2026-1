@@ -103,7 +103,7 @@ void loop()
 
     // send message, the Print interface can be used to set the message contents
     mqttClient.beginMessage(topic);
-    mqttClient.print("hello ");
+    mqttClient.print("presente profe ");
     mqttClient.print(count);
     mqttClient.endMessage();
 

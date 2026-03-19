@@ -28,12 +28,12 @@ los 3 siguientes puntos son criterios grupales
 individual:
 
 - 1 punto por calidad de la presentación oral
-- 1 punto por
-- 1 punto por
+- 1 punto por bitácora previa a la presentación
+- 1 punto por aporte detallado individual de cada persona al proyecto
 
 grupal:
 
-- 1 punto por documentación textual
+- 1 punto por documentación textual (README.md explicativo del proyecto)
 - 1 punto por diagrama de flujo
 - 1 punto por código fuente
 
