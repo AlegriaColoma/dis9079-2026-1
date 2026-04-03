@@ -1,5 +1,7 @@
 # persona-02
 
-## investigacion individual adafruit i/o
+investigaciones individuales
 
-## investigacion individual sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
+## sobre adafruit i/o
+
+## sobre artista, diseñadora o producto que usa electrónica o computación inalámbricas
