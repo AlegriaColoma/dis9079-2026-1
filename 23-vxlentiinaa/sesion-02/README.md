@@ -2,8 +2,6 @@
 
 lunes 16 marzo 2026
 
----
-
 04-06 primera solemne de Interacción digital
 
 Grupo: Sofía Cartes - Monserrat Paredes - Valentina Ruz
@@ -12,30 +10,56 @@ Grupo: Sofía Cartes - Monserrat Paredes - Valentina Ruz
 
 ## Apuntes 
 
+Open Source Hardware Association (OSHWA): 
+
 ```bash
 bash sirve para copiar directamente lo que escribo / agregarle un botoncito para copiar y pegar
 ```
+
+### Arduino
+
+Boards Manager: R4, convierte código en 01's Bibliotecas: MQTT
+
+`instalar 3 herramientas:`
+
+1. Boards Manager -> Arduino Uno R4 Boards (v1.5.3 o más reciente)
+2. Library Manager -> ArduinoMQTTClient (v0.1.8 o más reciente)
+3. Library Manager -> ArduinoGraphics (v1.1.4 o más reciente)
+
+Usaremos la palabra `Arduino` para referirnos a 3 cosas distintas:
+
+1. la placa de desarrollo.
+2. el software Arduino IDE, donde escribiremos el código que correrá en la placa.
+3. el lenguaje de programación, que es un dialecto del lenguaje C++.
 
 `Arduino IDE`
 
 - Void: vacío
 - Loop: repetir
 - Setup: se configura
-
-
 - Nomenclatura `Semver:` es la versión de un software que utiliza tres números (mayot.menor.parche) para indicar la magnitud de los cambios de un software
 - Homebrew: se creó para poder instalar cosas en la terminal del computador (deberíamos instalarla)
 - Usaremos el Arduino UNO R4 wifi
 
-Todo lo que escribimos en Arduino es en lenguaje c++
+**Todo lo que escribimos en Arduino es en lenguaje c++**
 
-OSC:
+*OSC:* Open Source Hardware Association (OSHWA)
 
-MQTT: los arduino se conectaran a traves de mosquitto y se enviaran cosas desde mosquitto
+*MQTT:* (Message Queuing Telemetry Transport). Los arduino se conectarán a traves de mosquitto y se enviaran cosas desde mosquitto
 
 [Mosquitto](https://mosquitto.org/) 
 
-[Homebrew]
+[Homebrew](https://brew.sh/)
+
+### Visual Studio Code
+
+instalar Visual Studio Code, un editor de código más avanzado, disponible en <https://code.visualstudio.com/>
+
+Lenguaje de versiones: 0.1.8
+
+- Primero: cuando hacen cambios tan grandes que no son compatibles con la versión anterior.
+- Segundo: Cuando se hacen cambios que son aun compatibles con la versión anterior.
+- Tercero: Cuando avanzan/se arreglan cosas.
 
 ---
 
