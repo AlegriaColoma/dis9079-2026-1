@@ -8,7 +8,7 @@ Lunes 13 Abril 2026
 
 * [Felipe Caurapan](https://github.com/felipecaurapan): 
 * [Camila Parada](https://github.com/Camila-Parada): Código, bill of materials
-* [Vania Paredes](https://github.com/paredesvania): Código, redacción de texto
+* [Vania Paredes](https://github.com/paredesvania): Código, Circuito, redacción de texto
 
 
 ## Descripción del proyecto
