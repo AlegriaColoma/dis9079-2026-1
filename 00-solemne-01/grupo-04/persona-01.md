@@ -13,15 +13,13 @@ Golan Levin es un artista, programador y diseñador estadounidense clave en el c
 
 + Se enfoca en la interacción humana con máquinas: sus obras reaccionan al movimiento, la voz o el comportamiento del público.
 + Mezcla código, imagen, sonido y participación.
-+Sus proyectos suelen ser lúdicos, pero también críticos: cuestionan cómo nos relacionamos con la tecnología.
++ Sus proyectos suelen ser lúdicos, pero también críticos: cuestionan cómo nos relacionamos con la tecnología.
 
 Tipos de obras que hace
 
-Instalaciones interactivas: espacios donde el espectador activa la obra.
-
-Performance audiovisual: combina música, visuales generados en vivo y programación.
-
-Software creativo: desarrolla herramientas para artistas y diseñadores.
++ Instalaciones interactivas: espacios donde el espectador activa la obra.
++ Performance audiovisual: combina música, visuales generados en vivo y programación.
++ Software creativo: desarrolla herramientas para artistas y diseñadores.
 
 Obras conocidas
 
