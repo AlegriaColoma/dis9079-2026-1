@@ -159,6 +159,10 @@ fuente: [donkey](https://docs.donkeycar.com/guide/build_hardware/)
 
 fuente: [digipart](https://www.digipart.com/part/PCA9685PW118?kw=PCA9685PW118&utm_source=bing&utm_medium=cpc&utm_campaign=Tier_F&utm_term=PCA9685PW118&utm_content=Tier_F_1)
 
+- este es el pinout sobre cómo debemos conectar el I2CPCA a la Raspberry Pi
+
+![pinout](./imagenes/pinoutRaspiI2CP.png)
+
 
 
 **Software**
