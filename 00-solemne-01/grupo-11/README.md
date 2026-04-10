@@ -50,4 +50,6 @@ Y finalmente resultó, el código funcionó y logramos prender y apagar el led d
 
 ## bibliografía
 
-https://learn.adafruit.com/series/adafruit-io-basics
+<https://learn.adafruit.com/series/adafruit-io-basics>
+
+<https://learn.adafruit.com/adafruit-io-basics-digital-output>
