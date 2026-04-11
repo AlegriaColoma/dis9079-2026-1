@@ -1,7 +1,7 @@
 # Luisa Toro
 investigaciones individuales
 
-# Introducción
+## Introducción
 
 Mi investigación para la Solemne 01 no se quedó solo en el cambio de plataforma; se centró en entender cómo lograr una comunicación inalámbrica robusta integrando el Arduino R4 WiFi, la nube de Adafruit IO y el software de Arduino.
 
@@ -66,7 +66,7 @@ El objetivo era conectar el Arduino R4 WiFi a Adafruit IO por primera vez.
 1. Mi experiencia: Al principio fue un enredo con las credenciales. Aprendí que el código es súper sensible: una mayúscula mal puesta en el nombre del WiFi y ya no conectaba.
 2. Lo que descubrí: Aquí fue cuando caché lo de los Puertos COM. Al conectar mi placa, vi que aparecía como COM14. Entendí que ese es el "asiento" que ocupa mi Arduino en el PC. También noté que si el código decía 115200 baudios y el monitor estaba en 9600, solo veía símbolos raros (rombos). Sincronizarlos fue la clave para ver el mensaje de "conectado.
 
-Ejercicio 2: El Drama del LED y el Dashboard
+# Ejercicio 2: El Drama del LED y el Dashboard
 
 Aquí la meta era pro pro: prender un LED físico con un botón digital desde Adafruit.
 
@@ -81,7 +81,7 @@ Durante estos dos ejercicios, me fijé en detalles del Arduino IDE que ahora me 
 * **Estructura:** Aprendí que el #include tiene que ir arriba sí o sí. Es como presentar a los invitados antes de empezar la fiesta.
 * **Redes:** Me voló la cabeza entender que no todos los WiFi sirven; tuve que configurar el Hotspot en 2.4 GHz porque mi Arduino no "ve" la frecuencia de 5 GHz que suelen usar los celulares modernos.
 
-Experimento Final: Comunicación entre Nodos (Emisor y Receptor)
+## Experimento Final - Grupal - Resumen: Comunicación entre Nodos (Emisor y Receptor)
 
 Después de los ejercicios del lunes, el miércoles nos tiramos a la piscina con un desafío mucho más pro: la comunicación bidireccional entre dos Arduinos R4 WiFi usando la matriz de LEDs de 12x8.
 El Objetivo del Experimento
@@ -93,46 +93,195 @@ Queríamos demostrar que podíamos tener dos sistemas de hardware totalmente ind
 
 Mis Observaciones Técnicas (Lo que aprendí en el proceso):
 
-1. El poder de los Feeds: Entendí que el "feed" en Adafruit no es solo una base de datos, es el punto de encuentro. El emisor publica en el feed y el receptor se suscribe a él. Es como si el emisor dejara una carta en un buzón y el receptor la fuera a buscar apenas llega.
-2. La Matriz de LEDs (12x8): Fue emocionante ver cómo un número que enviábamos desde el computador o desde el otro Arduino se convertía en una forma física en la matriz. Aprendí que programar la matriz requiere una lógica de "dibujo" por coordenadas, lo cual integra conceptos de programación más avanzados.
-3. Actualización de Firmware (v0.6.0): Aquí nos dimos cuenta de que si las placas no tienen el firmware actualizado, la comunicación se cae o es súper inestable. Es como tratar de hablar por una radio antigua; si el chip de WiFi no está al día, no hay "handshake" con la nube.
-4. Red Dedicada (Hotspot 2.4 GHz): Para que esto funcionara con dos placas a la vez, fue vital usar un punto de acceso dedicado. Descubrí que al tener dos dispositivos mandando y recibiendo datos al mismo tiempo, la estabilidad de la red es el corazón de todo el proyecto. Lo más imporatnte que aprendí es que esta comunicación se puede realizar desde cualquier parte del mundo; yo podría estar en mi casa y mi compañero en la suya, y las placas se seguirían hablando. Eso sí, siempre y cuando se cumplan estas "cláusulas" técnicas:
+1. **El poder de los Feeds:** Entendí que el "feed" en Adafruit no es solo una base de datos, es el punto de encuentro. El emisor publica en el feed y el receptor se suscribe a él. Es como si el emisor dejara una carta en un buzón y el receptor la fuera a buscar apenas llega.
+2. **La Matriz de LEDs (12x8):** Fue emocionante ver cómo un número que enviábamos desde el computador o desde el otro Arduino se convertía en una forma física en la matriz. Aprendí que programar la matriz requiere una lógica de "dibujo" por coordenadas, lo cual integra conceptos de programación más avanzados.
+3. **Actualización de Firmware (v0.6.0):** Aquí nos dimos cuenta de que si las placas no tienen el firmware actualizado, la comunicación se cae o es súper inestable. Es como tratar de hablar por una radio antigua; si el chip de WiFi no está al día, no hay "handshake" con la nube.
+4. **Red Dedicada (Hotspot 2.4 GHz):** Para que esto funcionara con dos placas a la vez, fue vital usar un punto de acceso dedicado. Descubrí que al tener dos dispositivos mandando y recibiendo datos al mismo tiempo, la estabilidad de la red es el corazón de todo el proyecto. Lo más imporatnte que aprendí es que esta comunicación se puede realizar desde cualquier parte del mundo; yo podría estar en mi casa y mi compañero en la suya, y las placas se seguirían hablando. Eso sí, siempre y cuando se cumplan estas "cláusulas" técnicas:
 
     Que ambos dispositivos estén en una red de 2.4 GHz.
     Que el Firmware de las placas esté actualizado (v0.6.0).
     Que las credenciales (AIO Key y Username) en el código sean las correctas para entrar al mismo "buzón" en la nube.
 
+Resultados:
 
 
 
 
 
 
+<div align="center"> <video src="https://github.com/user-attachments/assets/20e565f9-6a12-4114-818b-a9c23fc3dd31" width="600" controls> Tu navegador no soporta el elemento de video. </video> <p><i><b>Evidencia Final:</b> Handshake exitoso entre nodos. El Arduino receptor dibuja el número enviado desde la nube en tiempo real.</i></p> </div>
+
+## Mi Profundización Personal: El "Efecto Flash" ⚡
+
+Después de lograr que los Arduinos se comunicaran con números, me obsesioné un poco con lo que podíamos hacer. Me encantó ver cómo un dato viajaba por el aire y se convertía en luz, así que quise llevarlo al siguiente nivel: el Flash.
+
+La idea:
+
+Mi meta era que cuando el Arduino Receptor recibiera un dato específico de la nube, no solo dibujara un numerito, sino que toda la matriz de 12x8 se prendiera al mismo tiempo, como un flashazo de luz, y luego se apagara.
+
+El Desafío Técnico: ¿Qué cambié?
+
+Como ya teníamos la base de la comunicación lista, me di cuenta de que no necesitaba reescribir todo el código.
+
+* **Lo que se mantuvo:** Todo el bloque de #include, las credenciales de Adafruit y la configuración del WiFi. Esa es la "carcasa" que permite que el Arduino esté en línea.
+* **Lo que cambió (El Loop):** Aquí es donde metí mano. Tuve que modificar la lógica dentro del loop() y la función que escucha al feed de Adafruit (onMessage).
+
+## Codigo de Enviador:
+```cpp
+#include "AdafruitIO_WiFi.h"
+
+/*************** CREDENCIALES ************************/
+
+#define IO_USERNAME "TU_USUARIO_AQUÍ"
+#define IO_KEY "TU_KEY_AQUÍ"
+
+#define WIFI_SSID "TU_WIFI_AQUÍ"
+#define WIFI_PASS "TU_CLAVE_AQUÍ"
+
+#if defined(USE_AIRLIFT) || defined(ADAFRUIT_METRO_M4_AIRLIFT_LITE) || \
+    defined(ADAFRUIT_PYPORTAL)
+
+  #define SPIWIFI SPI
+  #define SPIWIFI_SS 10
+  #define NINA_ACK 9
+  #define NINA_RESETN 6
+  #define NINA_GPIO0 -1
+
+  AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS,
+                     SPIWIFI_SS, NINA_ACK, NINA_RESETN, NINA_GPIO0, &SPIWIFI);
+
+#else
+
+  AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+#endif
+
+/*************** PROGRAMA PRINCIPAL ************************/
+
+// Conexión al feed
+AdafruitIO_Feed *nombreFeed = io.feed("grupo08");
+
+int contador = 0;
+
+void setup() {
+  Serial.begin(115200);
+  while(!Serial);
+
+  Serial.print("Conectando con Adafruit IO...");
+
+  io.connect();
 
 
+  while(io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.println(io.statusText()); 
+}
+
+void loop() {
+
+  io.run();  
+
+  // PRENDER el LED (pin 13)
+  digitalWrite(LED_BUILTIN, HIGH);
+
+  Serial.print("Enviando número -> ");
+  Serial.println(contador);
 
 
+  nombreFeed->save(contador);
+
+ 
+  delay(200);
+  digitalWrite(LED_BUILTIN, LOW);
+
+  contador = contador + 2;
+
+  // Completa los 5 segundos
+  delay(4800);
+}
+```
+## Codigo de Receptor:
+```cpp
+#include "ArduinoGraphics.h" 
+#include "Arduino_LED_Matrix.h"   // Pantalla LED integrada
+#include "AdafruitIO_WiFi.h"
+
+/*************** CREDENCIALES************************/
+
+#define IO_USERNAME "TU_USUARIO_AQUÍ"
+#define IO_KEY "TU_KEY_AQUÍ"
+
+#define WIFI_SSID "TU_WIFI_AQUÍ"
+#define WIFI_PASS "TU_CLAVE_AQUÍ"
+
+/************************ OBJETOS ****************************/
+AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+ArduinoLEDMatrix matrix;
+
+// Feed 
+AdafruitIO_Feed *nombreFeed = io.feed("grupo08");
+
+/************************ SETUP ****************************/
+void setup() {
+  Serial.begin(115200);
+  while (!Serial);
+
+  matrix.begin();  // Iniciar matriz LED
+
+  Serial.print("Conectando a Adafruit IO...");
+  io.connect();
+
+  // Cuando llegue el mensaje → ejecutar función
+  nombreFeed->onMessage(leerMensaje);
+
+  // Esperar conexión
+  while (io.status() < AIO_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.println(io.statusText());
+}
+
+/************************ LOOP ****************************/
+void loop() {
+  io.run();  
+}
+
+/************************ FUNCIÓN FLASH ****************************/
+void leerMensaje(AdafruitIO_Data *data) {
+
+  Serial.print("Dato recibido: ");
+  Serial.println(data->value());
+
+  // Flash: prende toda la matriz
+  uint32_t flash[] = {
+    0xffffffff,
+    0xffffffff,
+    0xffffffff
+  };
+
+  matrix.loadFrame(flash);  // Encender LEDs
+  delay(500);
+
+  matrix.clear();  // Apagar
+}
+```
+Resultados: 
 
 
+¿Cómo lo logré? :
 
+1. **Identificar el mensaje:** Programar una condición (if) para que, cuando llegue el dato de "flash", el Arduino sepa que tiene que activar todos los LEDs.
+2. **Llenar la matriz:** Usar una función (como matrix.fill()) para prender los 96 LEDs de un solo golpe.
+3. **El manejo del tiempo:** Aquí aprendí que el orden de los comandos importa para que el flash no se quede pegado y la placa pueda seguir recibiendo más datos después.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+💡 Nota de mi "obsesión": Me di cuenta de que una vez que entiendes cómo "viaja" el dato (la infraestructura), el resto es pura creatividad en el código. Pasar de un número a un flash me enseñó que puedo manipular la salida física (los LEDs) de mil formas distintas usando la misma conexión de base. ¡Fue súper satisfactorio verlo funcionar!
 
 
 ## 🎨 Referente Artístico: Rafael Lozano-Hemmer
@@ -151,7 +300,7 @@ Obra Analizada: Pulse Topology (2021) Esta instalación consta de 3,000 bombilla
 * **Hardware Invisible:** La tecnología inalámbrica permite que el hardware "desaparezca". El espectador no ve cables, solo ve la reacción. Mi meta en este ramo es lograr esa misma fluidez: que el protocolo (MQTT/Adafruit) sea el puente invisible que permita que mi diseño se sienta orgánico y no "mecánico".
 
 Y para finalizar :)
-# Análisis de Capas de Interacción:
+## Análisis de Capas de Interacción:
 
 1. Biometría Inalámbrica: Lo que hace única a esta obra es que transforma un dato biológico (el pulso) en un paquete de datos digital. En nuestro curso, esto es equivalente a lo que haremos al conectar un sensor al Arduino: convertir una señal analógica en un mensaje MQTT que viaja por el aire. Lozano-Hemmer usa la biometría para que la interfaz sea el propio cuerpo, eliminando teclados o botones.
 2. El Concepto de "Antimonumento": El artista define sus obras como antimonumentos porque no son estáticos. Dependen 100% de la conectividad. Si el sistema inalámbrico se cae, la obra desaparece. Esto refuerza lo que aprendimos con los "chascarros" del profe: en la computación física, la estabilidad de la red es tan importante como el diseño del objeto mismo.
