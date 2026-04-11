@@ -210,7 +210,184 @@ nombreFeed->save(contador);
 
 -Se corrigió a 115200
 
-![solucion](./imagenes/audio de audio.png)
+![solucion](./imagenes/audiodeaudio.png)
+
+
+## 2. El "Botón de Reset" accidental
+
+-Al conectar el pulsador al pin A0, se generó un puente eléctrico que replicó la función del botón de reinicio maestro de la placa. Esto permitió que, al presionar el botón en la protoboard, el Arduino se reiniciara por completo, tal como si hubieras presionado el botón rojo integrado en la placa.
+
+-El cableado o el contacto en la protoboard activó el sistema de Reset. Esto corta la corriente por un milisegundo y obliga al programa a empezar desde cero.
+
+![conexión](./imagenes/conexiones.jpge)
+
+![reset](./imagenes/botóndereinicio.gif)
+
+
+
+ Datos visualizados en Adafruit IO
+ 
+![grafico](./imagenes/prueba1grupo01.png)
+
+
+##Código final funcional (Ya validado en clases)
+
+-Envío de datos cada 3 segundos al presionar botón.
+
+-Contador incremental.
+
+-Conexión estable a Adafruit IO.
+
+
+##Solución: Reasignación de Pines
+
+-Se movió la conexión del pulsador del pin A0 al Pin 1.
+
+-El conflicto eléctrico desapareció, permitiendo que el botón cumpliera su función real: enviar una señal digital que el Arduino procesa y transmite exitosamente a la nube en Adafruit IO.
+
+![solución](./imagenes/botonfunciona.gif)
+
+
+Adafruit IO para ver gráficos en tiempo real con los datos enviados.
+
+
+![grafico 1](./imagenes/prueba2grupo01.png)
+
+
+![grafico 2](./imagenes/prueba3grupo01.png)
+
+
+## Reflexión del proceso
+
+Aprendizajes técnicos:
+
+-Diferencia entre hardware, software y firmware.
+
+-Importancia de la configuración de red.
+
+-Uso de plataformas IoT.
+
+-Comunicación entre dispositivos remotos
+
+
+Aprendizajes prácticos:
+
+-Los errores más comunes son simples (baudios, claves).
+
+-La conexión WiFi es el punto más crítico.
+
+-Separar credenciales en config.h es buena práctica.
+
+-En Adafruit IO, te da la llave para colocar en el código en arduino.
+
+-El delay(3000) evita sobrecargar la plataforma (limitación de escritura).
+
+
+Siempre hay que colocar esa línea, para que el arduino no olvide el adafruit IO
+
+io.run();
+
+Es para ver lo que manda el otro arduino en adafruit
+
+io.feed();
+
+
+## Código que si funciona + el config.hes donde se guarda la clave de Adafruit IO y la clave de wifi
+
+// Adafruit IO Publish Example
+//
+// Adafruit invests time and resources providing this open source code.
+// Please support Adafruit and open source hardware by purchasing
+// products from Adafruit!
+//
+// Written by Todd Treece for Adafruit Industries
+// Copyright (c) 2016 Adafruit Industries
+// Licensed under the MIT license.
+//
+// All text above must be included in any redistribution.
+
+// ejemplo para enviar / publish
+// por montoyamoraga
+// para disenoUDP
+// basado en
+// Adafruit IO Publish Example
+
+// incluir archivo config.h
+// hacer las modificaciones de este archivo
+// NO subir a github
+#include "config.h"
+
+// esta variable entera
+// sera un contador que aumenta
+// durante el funcionamiento del software
+int contador = 0;
+
+// definir una variable que se llame nombreFeed
+// que tenga un cierto valor
+// mantener las doble comillas, cambiar grupoXX segun tu nombre de grupo
+AdafruitIO_Feed *nombreFeed = io.feed("grupo01");
+
+void setup()
+{
+
+  // prender la conexion serial
+  // ojo con la velocidad de 115200 baud
+  // cuando abras el monitor serial debes configurarlo
+  // a este numero, porque el standard de fabrica es 9600 baud
+  Serial.begin(115200);
+
+  // estas lineas pausan el codigo
+  // hasta que prendas el monitor serial
+  // la lupita arriba a la derecha en Arduino IDE
+  while (!Serial)
+    ;
+
+  // imprimir en consola
+  Serial.print("conectando a Adafruit IO");
+
+  // conectarse a io.adafruit.com
+  io.connect();
+
+  // esperar la conexion
+  while (io.status() < AIO_CONNECTED)
+  {
+    // imprimir un punto cada medio segundo
+    // mientras se conecta
+    Serial.print(".");
+    delay(500);
+  }
+
+  // demostrar que logramos conexion
+  Serial.println();
+  Serial.println(io.statusText());
+}
+
+void loop()
+{
+
+  // esta linea es necesaria
+  // al principio de loop()
+  // para mantener la conexion
+  // y procesar datos que lleguen
+  io.run();
+
+  // enviar el contador a Adafruit IO
+  // primero mostrar en monitor serial
+  Serial.println("enviando -> " + String(contador));
+  // despues enviar a la nube
+  nombreFeed->save(contador);
+
+  // incrementar el contador en 1
+  contador = contador + 1;
+
+  // Adafruit IO tiene una velocidad limitada
+  // de escritura / publishing
+  // usamos delay para pausar el codigo 3 segundos
+  delay(3000);
+}
+
+
+
 
 
 
