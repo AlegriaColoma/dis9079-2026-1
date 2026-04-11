@@ -14,4 +14,6 @@ pasos: new file, copiar código de discord, new tab nombre config.h, abre github
 
 hoy logramos, junto a anays cornejo, encender y apagar desde mi ipad el led que viene integrado en el arduino uno r4 wifi mediante el codigo que generamos para la solemne , esos resultadoes estaran en la carpeta de la solemne
 
-tambien, siguiendo las intrucciones de aaron, logramos enviar aal feed del profe el conteo que estaba el la carpeta codigo de la solemne 1
+tambien, siguiendo las intrucciones de el profe aaron, logramos enviar aal feed del profe el conteo que estaba el la carpeta codigo de la solemne 1
+
+![conteo](./imagenes/arduino.png)
