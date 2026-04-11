@@ -12,8 +12,14 @@ El Arduino se conecta a una red WiFi y luego establece comunicación con Adafrui
 Desde cualquier otro computador o celular, entras al dashboard de Adafruit IO en el navegador y presionas un botón toggle. Ese click viaja por internet hasta los servidores de Adafruit, que se lo reenvían al Arduino. El Arduino recibe el mensaje y enciende o apaga el LED.
 
 Partimos utilizando el código de ejemplo que subió Aaron a Github, para aprender como funcionaban las conexiones en base a una nube pero de primeras no funcionaba, y tras un rato investigando, dimos con que estabamos dando mal las credenciales que habia que cambiar del código, puntualmente la clave que estabamos poniendo,era la personal para ingresar al sitio, pero resulta que era la AIO Key, que es una clave alfanumérica que te da el Adafruit IO para poder conectarte a la nube.
-Luego de solucionar eso el código estaba bien, pero aún así no se conectaba, solo aparecía una serie de puntos infinitos (...........) que no nos dimos cuenta, hasta que en clases Aaron actualizó los Arduinos que tenian ese error y se solucionó, resulta que al final de los puntos habia un mensaje de "Please upgrade the WiFiS3 firmware!" pero no alcanzaba a verse.
+Luego de solucionar eso el código estaba bien, pero aún así no se conectaba, solo aparecía una serie de puntos infinitos
+
+![Puntos](./imagenes/puntos-suspensivos.png)
+
+no nos dimos cuenta, hasta que en clases Aaron actualizó los Arduinos que tenian ese error y se solucionó, resulta que al final de los puntos habia un mensaje de "Please upgrade the WiFiS3 firmware!" pero no alcanzaba a verse.
 Una vez actualizado el Arduino pudimos conectar bien con Adafruit IO y probamos con un ejercicio que nos dió Aaron, que consistía en conectarse a un feed en Adafruit IO el cual estaba conectado a una Dashboard con un contador,ese ejercicio si funcionó.
+
+![funcionó!!](./imagenes/conectado-a-adafruit.png)
 
 Durante la clase del lunes 06, quisimos intentar lograr prender un led conectado a una protoboard, pero ningún código nos funcionó.
 
@@ -139,11 +145,8 @@ void MQTT_connect() {
 }
 ```
 
-### código para recibir
+![codigo funcionando](./imagenes/codigo-funcionando.gif)
 
-```cpp
-// rellenar
-```
 
 ## investigaciones individuales
 
