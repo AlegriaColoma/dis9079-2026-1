@@ -112,3 +112,9 @@ Tipos de obras que hace.
 + Además, propone una interacción continua, en la que la voz actúa como un flujo constante de información que modula el sistema, en contraste con interfaces basadas en acciones puntuales.
 
 + Finalmente, establece una relación directa entre cuerpo, sistema y espacio, donde la voz no solo activa el sistema, sino que transforma el entorno en tiempo real, configurando un espacio reactivo propio de la computación ubicua.
+
+## Bibliografía
+
+https://www.flong.com/archive/bio/en/index.html
+
+https://www.flong.com/archive/projects/messa_inst/index.html
