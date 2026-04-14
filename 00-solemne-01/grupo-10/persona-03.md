@@ -37,16 +37,16 @@ Además, se deben incluir las credenciales de la red WiFi:
 #define WIFI_PASS "contraseña_wifi"
 ```
 
-### Librería
+### Biblioteca
 
-La librería de Adafruit IO permite:
+La biblioteca de Adafruit IO permite:
 
 - Conectar el dispositivo a internet  
 - Enviar datos a la nube (publish)  
 - Recibir datos desde la nube (subscribe)  
 - Mantener comunicación en tiempo real  
 
-Internamente, esta comunicación se basa en protocolos como MQTT, pero la librería simplifica su uso.
+Internamente, esta comunicación se basa en protocolos como MQTT, pero la biblioteca simplifica su uso.
 
 ### Funciones
 
