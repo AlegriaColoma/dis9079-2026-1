@@ -127,12 +127,10 @@ Levin, G., Lieberman, Z., Blonk, J., & La Barbara, J. (s.f.). *Messa di Voce*. F
 
 Levin, G. (s.f.). *Messa di Voce: An interview*. Flong. [https://www.flong.com/archive/texts/interviews/interview_mitp_messa/index.html](https://www.flong.com/archive/texts/interviews/interview_mitp_messa/index.html)
 
-ZKM Center for Art and Media. (s.f.). *Messa di Voce*. [https://zkm.de/en/artworks/messa-di-voce](https://zkm.de/en/artworks/messa-di-voce)
-
-ZKM Center for Art and Media. (s.f.). *Messa di Voce*. [https://zkm.de/en/artwork/messa-di-voce](https://zkm.de/en/artwork/messa-di-voce)
-
 Levin, G. (s.f.). *Bio*. Flong. [https://www.flong.com/archive/bio/en/index.html](https://www.flong.com/archive/bio/en/index.html)
 
 Levin, G., Lieberman, Z., Blonk, J., & La Barbara, J. (2003). *Messa di Voce*. Flong. [https://www.flong.com/archive/projects/messa_inst/index.html](https://www.flong.com/archive/projects/messa_inst/index.html)
 
+ZKM Center for Art and Media. (s.f.). *Messa di Voce*. [https://zkm.de/en/artworks/messa-di-voce](https://zkm.de/en/artworks/messa-di-voce)
 
+ZKM Center for Art and Media. (s.f.). *Messa di Voce*. [https://zkm.de/en/artwork/messa-di-voce](https://zkm.de/en/artwork/messa-di-voce)
