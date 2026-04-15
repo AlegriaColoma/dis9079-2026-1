@@ -82,3 +82,11 @@ rellenar en el mismo orden que los integrantes del grupo
 [persona-03.md](./persona-03.md)
 
 ## bibliografía
+
+Arduino. (s.f.). *WiFi examples (UNO R4 WiFi)*. [https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/](https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-examples/)
+
+Arduino. (s.f.). *Arduino IDE*. [https://docs.arduino.cc/software/ide/](https://docs.arduino.cc/software/ide/)
+
+Adafruit. (s.f.). *Adafruit IO for Arduino*. Adafruit Learning System. [https://learn.adafruit.com/adafruit-io/arduino](https://learn.adafruit.com/adafruit-io/arduino)
+
+Adafruit. (s.f.). *Adafruit IO Basics: Digital input*. Adafruit Learning System. [https://learn.adafruit.com/adafruit-io-basics-digital-input](https://learn.adafruit.com/adafruit-io-basics-digital-input)
