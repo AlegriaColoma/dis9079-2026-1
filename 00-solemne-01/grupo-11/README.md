@@ -12,7 +12,7 @@
 
 Al inicio del proyecto, como dupla no sabíamos muy bien qué hacer, estábamos bastante perdidos.
 
-En la última clase, trabajando al unísono con Aaron, fuimos entendiendo mejor el entorno de desarrollo y las posibilidades del Arduino UNO R4 WiFi junto a Adafruit IO.
+En la última clase, trabajando al unísono con Aarón, fuimos entendiendo mejor el entorno de desarrollo y las posibilidades del Arduino UNO R4 WiFi junto a Adafruit IO.
 
 Dado que todavía no manejamos bien las herramientas, decidimos comenzar con algo simple que nos permitiera comprender lo básico de comunicación entre dispositivos antes de intentar algo más complejo.
 
