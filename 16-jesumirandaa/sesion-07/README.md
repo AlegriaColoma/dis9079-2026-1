@@ -22,4 +22,7 @@ Timkercad:
 
 Proceso:
 
-![imagenes](./imagenes/aruinoprotoboard.jpg)
+![imagenes](./imagenes/aruinoprotoboard.jpeg)
+
+Cómo cambiar/reemplazar el potenciomaetro por un LDR?
+
