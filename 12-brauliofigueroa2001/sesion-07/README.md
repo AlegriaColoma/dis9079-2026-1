@@ -51,11 +51,19 @@ void loop()
 
 - este primer código nos permite ver números de 0 a 1023 en el monitor serial mediante la manipulación del potenciómetro
 
+![foto](./imagenes/prueba20abril.JPG)
+
+así se ven los datos que nos envía
+
+**(pendiente subir gif del potenciómetro girando y los datos cambiando en tiempo real)**
+
 - ahora añadiremos el servo?
 
 - primero haremos que el potenciómetro controle el servo de modo alámbrico y después lo haremos inalámbrico
 
 - si la patita no tiene sinusoide, no puede mover el servo, es este símbolo en el hardware de arduino ( ~ ) en este caso la patita de señal del servo es patita que debe ir conectado a los pines que tengan ese símbolo, lo conectaremos al pin 9 del arduino ~
+
+
 
 **código 2**
 
@@ -114,13 +122,13 @@ void loop()
 
 - este código permite girar el servo mediante el potenciómetro, es bacán
 
-- pendiente subir el video de la prueba de esto
+- **pendiente subir el video de la prueba de esto**
 
 ## break
 
 - vuelta de break
 
-ahora utilizaremos un código para poder mover de forma inalámbrica el servo
+ahora utilizaremos un código para poder mover de forma inalámbrica el servo parece
 
 - usaremos el código similar al que hicieron, cambiaremos el "mateo" por el nombre del grupo de solemne 2, en este caso potenciometro-10
 
@@ -210,7 +218,14 @@ void loop() {
 
 - en el final de la clase conectamos el arduino al wifi de mateo y funcionó, apareció que se conectó y enviaba datos con el potenciómetro. El único problema de momento es que a mateo no le aparece nuestro feed de grupo 10 en adafruit
 
+![foto2](./imagenes/conectamoslacosa.JPG)
+
 **actualización 17:44**
+
+
+- probamos nuevamente, aparecen nuevamente los datos siendo enviados
+
+![foto3](./imagenes/funcionodenuevo.JPG)
 
 - funcionó ahora sí, fui al lid con mateo y aarón , probamos conectarnos nuevamente y ahora nos detectó en los feeds, potenciómetro grupo 10!!!
 
