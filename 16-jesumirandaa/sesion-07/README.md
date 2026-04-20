@@ -22,4 +22,4 @@ Timkercad:
 
 Proceso:
 
-![imagenes](./imagenes/arduinoprotoboard.jpg)
+![imagenes](./imagenes/aruinoprotoboard.jpg)
