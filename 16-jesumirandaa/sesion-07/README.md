@@ -24,5 +24,7 @@ Proceso:
 
 ![imagenes](./imagenes/aruinoprotoboard.jpeg)
 
+
+
 Cómo cambiar/reemplazar el potenciomaetro por un LDR?
 
